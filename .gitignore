@@ -1,0 +1,21 @@
+# Dataset archives and extracted data
+*.7z
+*.zip
+data/
+dataset/
+train/
+test/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment and local secrets
+.env
+.env.*
+!.env.example

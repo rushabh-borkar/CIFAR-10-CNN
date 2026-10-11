@@ -5,21 +5,25 @@ A hands-on deep learning project exploring the CIFAR-10 image classification dat
 ## Current Progress
 
 - Downloaded the Kaggle CIFAR-10 competition files using KaggleHub.
-- Explored `trainLabels.csv`.
-- Confirmed 50,000 labeled training examples across 10 classes, with 5,000 examples per class.
-- Inspected `sampleSubmission.csv` and identified its 300,000 prediction rows.
+- Explored `trainLabels.csv` and confirmed 50,000 labeled training examples across 10 balanced classes.
+- Explored image dimensions (32x32 RGB) and verified consistency.
+- Visualized sample images and class distributions.
+- Computed dataset-wide RGB mean and standard deviation for normalization.
+- Created custom `Cifar10Dataset` with data augmentation (`RandomCrop`, `RandomHorizontalFlip`).
+- Built a deep 3-block CNN architecture with Batch Normalization, Dropout, and standard Pooling.
+- Implemented complete Training & Validation pipeline with Adam optimizer, `ReduceLROnPlateau`, and test prediction visualization.
 
 ## Dataset
 
 The downloaded files are stored locally through KaggleHub and are not committed to this repository. The competition data includes `train.7z`, `test.7z`, `trainLabels.csv`, and `sampleSubmission.csv`.
 
-## Planned Steps
-
-1. Explore image files and their dimensions.
-2. Visualize sample images and labels.
-3. Prepare the dataset for PyTorch.
-4. Build and train a CNN.
-5. Evaluate model performance.
+- [x] Explore image files and dimensions
+- [x] Visualize sample images and labels
+- [x] Compute dataset normalization stats & build PyTorch Dataset
+- [x] Build deep CNN architecture with Batch Normalization & Dropout
+- [x] Implement training and validation loops with learning rate scheduling
+- [ ] Run full multi-epoch training and log final evaluation metrics
+- [ ] Generate predictions on Kaggle test set (`test.7z`) for submission
 
 ## Tools
 
